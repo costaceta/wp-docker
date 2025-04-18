@@ -33,6 +33,8 @@ services:
     ports:
       - 8000:80
     restart: always
+    volumes:
+      - ./wordpress:/var/www/html # Mapeia a pasta local ./wordpress para a raiz do WordPress no container
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
